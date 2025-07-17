@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/13 10:26:44 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/15 10:04:46 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
-	int i; 
+	int	c;
+	int	d;
 
-	i = 0; 
-
-	if (str[i] == '\0')
+	c = 0;
+	d = 0;
+	while (dest[c] != '\0')
 	{
-        return (1);
+		c++;
 	}
-	while (str[i])
+	while (src[d] != '\0')
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
-		i++;
+		dest[c] = src[d];
+		c++;
+		d++;
 	}
-	return (1);
+	dest[c] = '\0';
+	return (dest);
 }
+//int main(void)
+//{
+//	char dest[100] = "bonjour";
+//	char src[] = "comment ca va ?";
+//	printf("avant : %s \n",dest);
+//	ft_strcat(dest,src);
+//	printf("apres : %s \n",dest);
+//
+//	return(0);
+//
+//}

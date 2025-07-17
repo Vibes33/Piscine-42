@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/16 18:32:22 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/16 19:30:08 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_sqrt(int nb)
 {
-	int i; 
+	int	i;
 
-	i = 0; 
-
-	if (str[i] == '\0')
-	{
-        return (1);
-	}
-	while (str[i])
-	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
+	if (nb <= 0)
+		return (0);
+	i = 1;
+	while (i * i < nb && i < 46341)
 		i++;
-	}
-	return (1);
+	if (i * i == nb)
+		return (i);
+	return (0);
 }

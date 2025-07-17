@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/14 13:42:20 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/14 14:14:19 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_iterative_factorial(int nb)
 {
-	int i; 
+	int	i;
+	int	res;
 
-	i = 0; 
+	i = 1;
+	res = 1;
+	if (nb < 0)
+		return (0);
+	while (i <= nb)
+		res *= i++;
+	return (res);
+}
 
-	if (str[i] == '\0')
-	{
-        return (1);
-	}
-	while (str[i])
-	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
-		i++;
-	}
-	return (1);
+int main()
+{
+	printf("%d", ft_iterative_factorial(3));
 }

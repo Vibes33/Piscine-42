@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/16 09:56:18 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/16 10:15:54 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+int ft_iterative_power(int nb, int power)
 {
-	int i; 
+	int	result;
 
-	i = 0; 
-
-	if (str[i] == '\0')
+	result = 1;
+	if (power < 0)
 	{
-        return (1);
+		return (0);
 	}
-	while (str[i])
+	if (power == 0)
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
-		i++;
+		return(1);
 	}
-	return (1);
+	while (power > 0)
+	{
+		result *= nb;
+		power --;
+	}
+	return (result);
 }

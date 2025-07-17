@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/17 14:51:00 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/17 15:07:31 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+void	ft_print_program(char *str)
 {
-	int i; 
+	int	i;
 
-	i = 0; 
-
-	if (str[i] == '\0')
-	{
-        return (1);
-	}
+	i = 0;
 	while (str[i])
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
+		write(1, &str[i++], 1);
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	int	i;
+
+	i = 0;
+	(void) argc;
+	if (i == 0)
+	{
+		ft_print_program(argv[i]);
+		write(1, "\n", 1);
 		i++;
 	}
-	return (1);
+	return (0);
 }

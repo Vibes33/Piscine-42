@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/13 10:19:55 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/15 17:02:11 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int i; 
+	unsigned int	i;
 
-	i = 0; 
-
-	if (str[i] == '\0')
+	i = 0;
+	if (n <= 0)
+		return (0);
+	while ((s1[i] || s2[i]) && i < n)
 	{
-        return (1);
-	}
-	while (str[i])
-	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (1);
+	return (0);
 }
+//#include <stdio.h>
+//int main ()
+//{
+//	char a[]= "aabbb";
+//	char b[]= "Aaaa";
+//	printf("%i", ft_strncmp(a, b, 4));
+//	return(0);
+//}

@@ -1,37 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/14 10:43:16 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/14 10:45:03 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_alpha(char *str)
+void	ft_putchar(char c)
 {
-	int i; 
+	write(1, &c, 1);
+}
 
-	i = 0; 
+void	ft_putnbr(int nb)
+{
+	int	div;
+	int	modulo;
 
-	if (str[i] == '\0')
+	if (nb == -2147483648)
 	{
-        return (1);
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	while (str[i])
+	if (nb < 0)
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
-		i++;
+		ft_putchar('-');
+		nb = -nb;
 	}
-	return (1);
+	if (nb > 9)
+	{
+		modulo = nb % 10;
+		div = nb / 10;
+		ft_putnbr(div);
+		ft_putchar(modulo + '0');
+	}
+	else
+		ft_putchar(nb + '0');
 }

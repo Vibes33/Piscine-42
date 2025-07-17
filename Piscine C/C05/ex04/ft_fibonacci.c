@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/10 17:08:40 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/10 18:00:05 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/16 10:20:05 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/16 10:28:23 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_str_is_alpha(char *str)
+int ft_fibonacci(int index)
 {
-	int i; 
-
-	i = 0; 
-
-	if (str[i] == '\0')
+	if (index == 0)
 	{
-        return (1);
+		return(0);
 	}
-	while (str[i])
+	if (index < 0)
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
-			if (!(str[i] >= 'A' && str[i] <= 'Z'))
-			{
-				return (0);
-			}
-		}
-		i++;
+		return(-1);
 	}
-	return (1);
+	if (index == 1)
+	{
+		return(1);
+	}
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index -2));
 }
