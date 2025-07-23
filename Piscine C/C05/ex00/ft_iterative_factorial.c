@@ -6,7 +6,7 @@
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 13:42:20 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/14 14:14:19 by rydelepi         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:08:22 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,4 @@ int	ft_iterative_factorial(int nb)
 	while (i <= nb)
 		res *= i++;
 	return (res);
-}
-
-int main()
-{
-	printf("%d", ft_iterative_factorial(3));
 }

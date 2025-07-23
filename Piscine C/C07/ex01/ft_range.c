@@ -1,38 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 15:07:56 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/22 10:31:28 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/22 10:41:03 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/22 14:28:12 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_read(char *str)
+int	*ft_range(int min, int max)
 {
+	int	*a;
 	int	i;
 
 	i = 0;
-	while (str[i])
+	if (min > max)
 	{
-		write(1, &str[i++], 1);
+		return (0);
 	}
-}
-
-int	main(int argc, char **argv)
-{
-	int	i;
-
-	i = 1;
-	while (i < argc)
+	a = malloc(sizeof (int) * (max - min));
+	if (a == NULL)
 	{
-		ft_read(argv[i]);
-		write(1, "\n", 1);
+		return (NULL);
+	}
+	while (min < max)
+	{
+		a[i] = min;
+		min++;
 		i++;
 	}
-	return (0);
+	return (a);
 }
+//#include <stdio.h>
+//
+//int main (void)
+//{
+//	int *tab;
+//	int i = 0;
+//
+//	tab = ft_range(2,10);
+//	while(i < 8)
+//	{
+//		printf("%d", tab[i]);
+//		i++;
+//	}
+//	free(tab);
+//	return(0);
+//
+//}

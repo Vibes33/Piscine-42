@@ -6,13 +6,13 @@
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 20:58:48 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/15 21:32:51 by rydelepi         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:09:40 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
 	{
@@ -23,6 +23,5 @@ int ft_recursive_factorial(int nb)
 		return (1);
 	}
 	else
-		return(nb * ft_recursive_factorial(nb - 1));
-
+		return (nb * ft_recursive_factorial (nb - 1));
 }

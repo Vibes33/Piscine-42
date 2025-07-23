@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 15:07:56 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/22 10:31:28 by rydelepi         ###   ########.fr       */
+/*   Created: 2025/07/21 10:44:25 by rydelepi          #+#    #+#             */
+/*   Updated: 2025/07/22 14:33:42 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_read(char *str)
+void	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		write(1, &str[i++], 1);
-	}
-}
-
-int	main(int argc, char **argv)
-{
-	int	i;
-
-	i = 1;
-	while (i < argc)
-	{
-		ft_read(argv[i]);
-		write(1, "\n", 1);
 		i++;
 	}
-	return (0);
+	return (i);
+}
+
+char	*ft_strdup(char *src)
+{
+	char	*dest;
+	int		i;
+
+	i = 0;
+	dest = malloc(sizeof(char) * ft_strlen(src) + 1);
+	if (!dest)
+	{
+		return (NULL);
+	}
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

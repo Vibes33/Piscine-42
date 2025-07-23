@@ -6,13 +6,13 @@
 /*   By: rydelepi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 09:56:18 by rydelepi          #+#    #+#             */
-/*   Updated: 2025/07/16 10:15:54 by rydelepi         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:11:11 by rydelepi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_iterative_power(int nb, int power)
+int	ft_iterative_power(int nb, int power)
 {
 	int	result;
 
@@ -23,7 +23,7 @@ int ft_iterative_power(int nb, int power)
 	}
 	if (power == 0)
 	{
-		return(1);
+		return (1);
 	}
 	while (power > 0)
 	{
