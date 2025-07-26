@@ -16,16 +16,15 @@ int	ft_ultimate_range(int **range, int min, int max)
 {
 	int	i;
 
-	i = 0;
-	if (min > max)
+	if (min >= max)
 	{
+		*range = NULL;
 		return (0);
 	}
-	if (*range == NULL)
-	{
-		return (-1);
-	}
 	*range = malloc(sizeof(int) * (max - min));
+	if (*range == NULL)
+		return (-1);
+	i = 0;
 	while (min < max)
 	{
 		(*range)[i] = min;
@@ -34,25 +33,26 @@ int	ft_ultimate_range(int **range, int min, int max)
 	}
 	return (i);
 }
-//#include <stdio.h>
-//
-//int	main(void)
-//{
-//	int *p;
-//	int i = 0;
-//	int size;
-//	
-//	size = ft_ultimate_range(&p , 0, 9);
-//	printf("taille du tab : %d \n", size);
-//	if (size <= 0)
-//	{
-//		return (1);
-//	}
-//	while(i < size)
-//	{
-//		i++;
-//		printf("%d",i);
-//	}
-//	free(p);
-//	return (0);
-//}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	int *p;
+	int i = 0;
+	int size;
+	
+	size = ft_ultimate_range(&p , 0, 9);
+	printf("taille du tab : %d \n", size);
+	if (size <= 0)
+	{
+		return (1);
+	}
+	while(i < size)
+	{
+		i++;
+		printf("%d",i);
+	}
+	free(p);
+	return (0);
+}

@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-void	ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -30,7 +30,7 @@ char	*ft_strdup(char *src)
 	int		i;
 
 	i = 0;
-	dest = malloc(sizeof(char) * ft_strlen(src) + 1);
+	dest = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!dest)
 	{
 		return (NULL);
@@ -43,3 +43,12 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+//#include <string.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	printf("'%s'\n", ft_strdup(""));
+//	printf("'%s'\n", ft_strdup("coucou"));
+//	return (0);
+//}
