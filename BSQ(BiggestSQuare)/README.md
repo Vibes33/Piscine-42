@@ -1,5 +1,3 @@
-Félicitations pour la validation de ton BSQ ! 🎉 Voici un exemple de README.md clair et structuré pour ton dépôt GitHub :
-
 ⸻
 
 🟫 BSQ - Biggest Square Finder
