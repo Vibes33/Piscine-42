@@ -25,34 +25,28 @@ int	ft_ultimate_range(int **range, int min, int max)
 	if (*range == NULL)
 		return (-1);
 	i = 0;
-	while (min < max)
+	while (i < (max - min))
 	{
-		(*range)[i] = min;
-		min++;
-		i++;
+		(*range)[i] = min + i;
+        i++;
 	}
-	return (i);
+	return (max - min);
 }
 
-#include <stdio.h>
-
-int	main(void)
-{
-	int *p;
-	int i = 0;
-	int size;
-	
-	size = ft_ultimate_range(&p , 0, 9);
-	printf("taille du tab : %d \n", size);
-	if (size <= 0)
-	{
-		return (1);
-	}
-	while(i < size)
-	{
-		i++;
-		printf("%d",i);
-	}
-	free(p);
-	return (0);
-}
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int *p;
+//int i;
+//
+//    i = ft_ultimate_range(&p, 0, 20);
+//    printf("%d\n", i);
+//    while (i > 0)
+//    {
+//        printf("%d ", *p);
+//        p++;
+//        i--;
+//   }
+//    free(p);
+//}
