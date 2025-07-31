@@ -126,5 +126,5 @@ Développé par [Ryan Delépine et Raphaël Destruhaut].
 
 
 
-![Valid](https://github.com/Vibes33/Piscine-42/blob/main/BSQ(BiggestSQuare/Images/Screenshot%202025-07-31%20at%2020.15.29.png)
+![Valid](https://github.com/Vibes33/Piscine-42/blob/main/BSQ(BiggestSQuare)/Images/Screenshot%202025-07-31%20at%2020.15.29.png)
 
