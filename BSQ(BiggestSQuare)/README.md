@@ -99,7 +99,6 @@ Sortie possible :
 
 ⚠️ Particularités 42
     •    Projet codé uniquement en C
-    •    Aucun appel système interdit (malloc, open, read, etc.)
     •    Interdiction des fonctions for, do…while, goto, switch
     •    Code lisible, normé et segmenté en fichiers clairs (map.c, solve.c, utils.c, main.c, etc.)
 
