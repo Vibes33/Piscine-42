@@ -46,7 +46,7 @@ Cette méthode permet de ne conserver que deux lignes en mémoire à la fois, op
 
 🧪 Génération de maps de test
 
-Un script Perl (fourni ou à écrire comme ci-dessous) permet de générer automatiquement des cartes :
+Un script Perl fourni permet de générer automatiquement des cartes :
 
 perl generate_map.pl 20 40 30 > map1.txt
 
