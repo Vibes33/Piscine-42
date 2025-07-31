@@ -74,10 +74,9 @@ int	validity_checker(char *file_name, char ***map, t_map_params **params)
 void	mass_print(char	**map, int size)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
+
 	while (i < size)
 	{
 		ft_putstr(map[i]);
