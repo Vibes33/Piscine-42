@@ -43,12 +43,12 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-	printf("'%s'\n", ft_strdup(""));
-	printf("'%s'\n", ft_strdup("coucou"));
-	return (0);
-}
+//#include <string.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	printf("'%s'\n", ft_strdup(""));
+	//printf("'%s'\n", ft_strdup("coucou"));
+//	return (0);
+//}

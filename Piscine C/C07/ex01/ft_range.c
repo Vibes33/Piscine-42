@@ -32,20 +32,20 @@ int	*ft_range(int min, int max)
 	return (a);
 }
 
-#include <stdio.h>
-
-int main (void)
-{
-	int *tab;
-	int i = 0;
-
-	tab = ft_range(2,10);
-	while(i < 8)
-	{
-		printf("%d", tab[i]);
-		i++;
-	}
-	free(tab);
-	return(0);
-
-}
+//#include <stdio.h>
+//
+//int main (void)
+//{
+//	int *tab;
+//	int i = 0;
+//
+//	tab = ft_range(2,10);
+//	while(i < 8)
+//	{
+//		printf("%d", tab[i]);
+//		i++;
+//	}
+//	free(tab);
+//	return(0);
+//
+//}
