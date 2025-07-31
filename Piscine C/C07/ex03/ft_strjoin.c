@@ -89,15 +89,15 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	return (result);
 }
-#include <stdio.h>
-int main (void)
-{
-	char *strs[4]= {"hello", "hi", "안녕하세요", "halo"};
-	char *sep = "-";
-	char *result;
-
-	result = ft_strjoin(4,strs,sep);
-printf("%s",result);
-free(result);
-	return(0);
-}
+//#include <stdio.h>
+//int main (void)
+//{
+//	char *strs[4]= {"hello", "hi", "안녕하세요", "halo"};
+//	char *sep = "-";
+//	char *result;
+//
+//	result = ft_strjoin(4,strs,sep);
+//printf("%s",result);
+//free(result);
+//	return(0);
+//}
