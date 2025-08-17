@@ -5,7 +5,7 @@
 📌 Présentation
 
 BSQ (Biggest Square) est un projet réalisé dans le cadre de la piscine 42.
-Il consiste à lire une carte composée d’obstacles et d’espaces vides, et à trouver le plus grand carré vide possible, puis à le afficher sur la carte en le remplissant avec un caractère dédié.
+Il consiste à lire une carte composée d’obstacles et d’espaces vides, et à trouver le plus grand carré vide possible, puis à l'afficher sur la carte en le remplissant avec un caractère dédié.
 
 ⸻
 
